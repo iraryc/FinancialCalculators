@@ -9,11 +9,6 @@ function calculateMortgage(P, annualRate, L_years) {
 
     return monthlyPayment;
 }
-
-function calculateCD(){
-    
-}
-
 // Example usage:
 let principal = 200000; // Principal amount ($200,000)
 let annualRate = 0.05; // Annual interest rate (5%)
@@ -36,6 +31,34 @@ function ClickTheCalcButton() {
 
 }
 
+//CD Calculator 
+function calculateCD(Prin, a_rate, T_years) {
+    // let T_months = T_years * 12; //This will calcualate the loan in months and not years
+    let percentRate1 = a_rate/100
+
+    let cdMonthlyPay = Prin * Math.pow(1 + (percentRate1 / 365), 365 * T_years);
+
+    return cdMonthlyPay;
+}
+
+let deposit = 1000;
+let percentRate = 1.75;
+let yearTerm = 5;
+
+let cdMonthlyPay = calculateCD (deposit, percentRate, yearTerm);
+let totalBalance = cdMonthlyPay;
+let totalInterest = totalBalance - deposit;
+
 function ClickTheCDButton() {
+    let depositAmount = Number (document.getElementById('depositAmount').value);
+    let interestRate = Number (document.getElementById('interestRate').value);
+    let loanTerm = Number (document.getElementById('loanTerm').value);
+
+    cdMonthlyPay = calculateCD (depositAmount, interestRate, loanTerm);
+    totalBalance = cdMonthlyPay;
+    totalInterest = totalBalance - depositAmount;
+    
+    document.getElementById('totalBalance').value = totalBalance.toFixed(2);
+    document.getElementById('totalInterest').value = totalInterest.toFixed(2);
 
 }
