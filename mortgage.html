@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mortgage calculator</title>
+</head>
+<body>
+    <div class="container">
+    <h1> Mortgage Calculator </h1>
+
+    <form for="loanAmount"> Loan Amount:</form>
+    <input type="number" id="loanAmount">
+
+    <form for="interestRate">Interest Rate per Year</form>
+    <input type="number" id="interestRate">
+
+    <form for="loanTerm"> Loan Term in Years</form>
+    <input type="number" id="loanTerm">
+
+    <button id="bntMyButtonAdd" onclick="ClickTheCalcButton()">Calculate</button>
+
+    <p>Monthly Payments <input type="number" id="monthlyPayments"/></p>
+    <p>Total Payments <input type="number" id="totalPayments"/></p>
+    
+    </div>
+   
+    <script src="script.js"></script>
+</body>
+</html>
