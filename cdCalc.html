@@ -3,28 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cd calculator</title>
+    <title>CD Calculator</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Add custom styles here if needed */
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h1> CD Calculator </h1>
+    <div class="container mt-5">
+        <h1 class="text-center">CD Calculator</h1>
     
-        <form for="depositAmount"> Loan Amount:</form>
-        <input type="number" id="depositAmount">
+        <form>
+            <div class="form-group">
+                <label for="depositAmount">Loan Amount:</label>
+                <input type="number" class="form-control" id="depositAmount">
+            </div>
     
-        <form for="interestRate">Interest Rate per Year</form>
-        <input type="number" id="interestRate">
+            <div class="form-group">
+                <label for="interestRate">Interest Rate per Year:</label>
+                <input type="number" class="form-control" id="interestRate">
+            </div>
     
-        <form for="loanTerm"> Loan Term in Years</form>
-        <input type="number" id="loanTerm">
+            <div class="form-group">
+                <label for="loanTerm">Loan Term in Years:</label>
+                <input type="number" class="form-control" id="loanTerm">
+            </div>
     
-        <button id="bntMyButtonAdd" onclick="ClickTheCDButton()">Calculate</button>
+            <button type="button" class="btn btn-primary" onclick="ClickTheCDButton()">Calculate</button>
     
-        <p>Total Balance <input type="number" id="totalBalance"/></p>
-        <p>Total Interest Earned <input type="number" id="totalInterest"/></p>
-        
-        </div>
+            <div class="form-group mt-3">
+                <label for="totalBalance">Total Balance:</label>
+                <input type="number" class="form-control" id="totalBalance">
+            </div>
+    
+            <div class="form-group">
+                <label for="totalInterest">Total Interest Earned:</label>
+                <input type="number" class="form-control" id="totalInterest">
+            </div>
+        </form>
+    </div>
        
-        <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
